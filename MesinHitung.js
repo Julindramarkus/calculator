@@ -1,51 +1,54 @@
-'use strict'
-class MesinHitung{
-      constructor(){
-        this.initNum = 1;
-        this.PI = Math.PI;
-      }
+"use strict";
 
-      set x(num){
-        this.initNum = Num;
-      }
-
-      get x(){
-        return this.initNum;
-      }
-
-      tambah(num){
-          this.initNum = this.initNum + num; //or this.initNum += num;
-          return this;
-      }
-
-    kurang(num){
-        this.initNum = this.initNum - num;  //or this.initNum -= num;
-        return this;
-    }
-    pembagian(num){
-        this.initNum /= num;
-        return this;
-    }
-    perkalian(num){
-      this.initNum *= num;
-      return this;
-    }
-    square(num){
-        this.initNum = math.pow(this.initNum, 2); // fungsiluas lingkaran
-        return this;
-    }
-    exponent(num){
-        this.initNum = math.pow(this.initNum, num); //fungsi pangkat
-        return this;
-    }
-    squareRoot(num){
-        this.initNum = math.sqrt(this.initNum); //fungsi akar
-    }
-    result(){
-      console.log(this.initNum);
-      this.resultNum = 1;
-      return this;
-    }
+module.exports = class MesinHitung {
+  constructor() {
+    this.hasilNum = 1;
+    this.Pi = Math.PI; // kalo PI i nya kecil dia bakal jadi NaN karna isinya itu ada desimal
   }
 
-  export {MesinHitung as default}
+  X(num) {
+    this.hasilNum = num;
+    return this;
+  }
+
+  tambah(num) {
+    this.hasilNum += num;
+    return this;
+  }
+
+  kurang(num) {
+    this.hasilNum -= num;
+    return this;
+  }
+
+  kali(num) {
+    this.hasilNum *= num;
+    return this;
+  }
+
+  bagi(num) {
+    this.hasilNum /= num;
+    return this;
+  }
+
+  square() {
+    this.hasilNum = Math.pow(this.hasilNum, 2);
+    return this;
+  }
+
+  exponent(num) {
+    this.hasilNum = Math.pow(this.hasilNum, num);
+    return this;
+  }
+
+  squareRoot() {
+    this.hasilNum = Math.sqrt(this.hasilNum);
+    return this;
+  }
+
+  hasil() {
+    console.log(this.hasilNum);
+    this.hasilNum = 1;
+    return this;
+  }
+};

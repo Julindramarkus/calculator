@@ -44,3 +44,4 @@ module.exports = class MesinHitung{
     return this;
   }
 };
+
